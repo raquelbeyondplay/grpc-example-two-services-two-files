@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package admin;
+
+message AdminEmptyRequest {}
+
+message AdminResponse {
+  string name = 1;
+}
+
+service Admin {
+  rpc GetAdminUser(AdminEmptyRequest) returns (AdminResponse);
+}

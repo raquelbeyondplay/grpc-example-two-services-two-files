@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package calculator;
+
+message CalculatorEmptyRequest {
+}
+
+message CalculatorResponse {
+  string name = 1;
+}
+
+service Calculator {
+  rpc GetAppVersion(CalculatorEmptyRequest) returns (CalculatorResponse);
+}
